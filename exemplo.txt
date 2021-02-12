@@ -1,0 +1,3 @@
+É comum, em funções let, alinhar na
+vertical as variáveis definidas (no
+caso, a = 5 e b = 6).
