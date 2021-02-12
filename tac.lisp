@@ -1,4 +1,4 @@
-; TAC (`cat` reverso)
+; tac (`cat` reverso)
 ; rui valporto, 2021
 
 ; função p/ obter arquivo
@@ -11,7 +11,8 @@
           collect line)))
 
 ; função p/ reverter listas
-; 
+; fonte: Tudor Jebelean, RISC–Linz, Mai 2010 
+;
 (defun R (L)
   (do ((L2 () (cons (car L1) L2))
        (L1 L (cdr L1)))
@@ -24,12 +25,11 @@
   (let ((arquivo "")
         (reverso ()))
     
-;    (setq arquivo (cadr sb-ext:*posix-argv*))
-    (setq arquivo (nth 1 sb-ext:*posix-argv*))
+    (setq arquivo (cadr sb-ext:*posix-argv*))
     (setq reverso (R (linhas arquivo)))
 
     (loop for i in reverso
-          do (format t "~a ~%" i))))
+          do (format t "~a~%" i))))
 
 (sb-ext:save-lisp-and-die "tac"
 :executable t
