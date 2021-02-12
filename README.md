@@ -12,5 +12,6 @@
 
 ### Instalação:
 ```
+chmod +x tac
 cp tac /usr/local/bin/
 ```
