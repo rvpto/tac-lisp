@@ -31,6 +31,8 @@
     (loop for i in reverso
           do (format t "~a~%" i))))
 
+; SBCL
+;
 (sb-ext:save-lisp-and-die "tac"
 :executable t
 :toplevel #'main)
